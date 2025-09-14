@@ -51,12 +51,12 @@ add_contato <- function(agenda) {
     if (validar_email(email)) {
       break
     } else {
-      cat("ERRO: Formato de e-mail inválido! Tente novamente.\n")
+      cat("ERRO: Formato de e-mail invalido! Tente novamente.\n")
     }
   }
   
   if (nome == "") {
-    cat("\nErro: O campo nome não pode ser vazio.\n")
+    cat("\nErro: O campo nome nao pode ser vazio.\n")
     return(agenda)
   }
   
@@ -111,7 +111,7 @@ att_contato <- function(agenda) {
   indice <- which(agenda$id == id_para_att)
   
   if (length(indice) == 0) {
-    cat("\nERRO: ID não encontrado.\n")
+    cat("\nERRO: ID nao encontrado.\n")
   } else {
     contato_atual <- agenda[indice, ]
     cat("Atualizando dados para o contato:\n")
@@ -201,5 +201,5 @@ main <- function() {
   }
 }
 
-# Inicia a aplicação
+
 main()
